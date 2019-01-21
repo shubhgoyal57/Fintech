@@ -1,9 +1,9 @@
 package com.link.ENUMS
 
 enum Seriousness {
-    Serious('Serious'),
-    Very_Serious('Very serious'),
-    Casual('Casual')
+    SERIOUS('SERIOUS'),
+    VERY_SERIOUS('VERY SERIOUS'),
+    CASUAL('CASUAL')
 
     String name
     public Seriousness(String name)

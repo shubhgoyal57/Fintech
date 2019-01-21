@@ -29,7 +29,7 @@ class SubscriptionService {
             return "subscribed"
         }
         else{
-            Subscription.load(id: topic).delete()
+
         }
 
         return "not subscribed"

@@ -5,8 +5,9 @@
 </head>
 
 <body>
-<div class="jumbotron" align="center">
-    <form action="/user/reset">
+<div class="card" align="center">
+    <div class="card-header">Enter username</div>
+    <form action="/user/resetPassword">
         Enter username :<input type="textField" name="username">
         <br>
         <br>

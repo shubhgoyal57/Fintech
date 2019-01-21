@@ -16,6 +16,8 @@ class TopicController {
         List list = Topic.getAll()
         def topicSubscribed=Subscription.findAllByUser(user)
         List topicCreatedByUser=Topic.findAllByCreatedBy(user)
+        List list1=Topic.findAll([max:5,sort:"dateCreated",order:"desc"])
+        println("tisis list of topics "+list1)
         render(view: "/homepage/home", model: [topicSubscribed:topicSubscribed,topicCreatedByUser:topicCreatedByUser,topics: list,topicCount:topicCount,subcriptionCount:subcriptionCount,user:user])
     }
 

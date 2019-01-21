@@ -16,14 +16,6 @@ class UserController {
     def save(SignupCO signupco) {
 
         String s = userService.create(signupco)
-//        mailService.sendMail {
-//            to "shubham@fintechlabs.in"
-//            from "shubhgoyal57@gmail.com"
-//
-//            subject "trying"
-//            text 'i am in link'
-//        }
-
         render(view: '/login/login')
         //render s
     }
@@ -34,7 +26,7 @@ class UserController {
         render(view: '/login/forget')
     }
 
-    def reset() {
+    def resetPassword() {
 
         String s = (String) params.username
 
@@ -43,7 +35,7 @@ class UserController {
         render(view: '/login/reset', model: [user: s])
     }
 
-    def change() {
+    def changePassword() {
         String newPassword = (String) params.password
 
         def username2 = flash.username1

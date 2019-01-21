@@ -13,6 +13,7 @@ class TopicService {
     def create(TopicCO topicCO, User createdBy) {
 
         Topic topic = new Topic(topicCO, createdBy)
+
         if (!topic.save(flush: true)) {
             topic.errors.allErrors.each {
                 println(it)

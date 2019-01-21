@@ -4,6 +4,6 @@ class LogoutController {
 
     def index() {
         session.invalidate()
-        redirect(controller: 'login')
+        redirect(controller: 'signup' ,action:'index')
     }
 }
